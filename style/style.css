@@ -1,5 +1,6 @@
 body {
     --card-width: 350px;
+    --text-color: #808080;
     --color-accent: #379CE9;
 }
 
@@ -19,6 +20,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cardContainer {
@@ -38,15 +40,16 @@ body {
 .cardTop {
     height: 45%;
     width: 100%;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .userPhoto {
-    width: calc(var(--card-width) * 0.4);
-    height: calc(var(--card-width) * 0.4);
+    width: calc(var(--card-width) * 0.35);
+    height: calc(var(--card-width) * 0.35);
     border-radius: 50%;
     border: 2px solid white;
     overflow: hidden;
@@ -58,39 +61,58 @@ body {
     object-fit: cover;
 }
 
-/* .userMarker {
-    width: calc(var(--card-width) * 0.75);
-    height: calc(var(--card-width) * 0.75);
+.userMarker {
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background-color: whitesmoke;
-    margin: -500px;
-} */
+    background-color: white;
+    margin-top: -35px;
+}
 .userOccupation,
 .userNameAge,
 .userSalary,
+.userLocation > p,
 .CvLink,
 .offerLink {
     font-weight: bold;
 }
 
-
-.userNameAge {
-
-}
-
 .userSalary {
     font-size: 0.85em;
+    color: var(--text-color);
 }
 
+.mainInfo {
+    height: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.userNameAge {
+    font-size: 0.85em;
+}
 .userLocation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+.userLocation > p {
+    font-size: 0.7em;
+    color: var(--text-color);
 }
 
 .userInfo {
-    color: rgb(128,128,128);
+    color: var(--text-color);
     font-size: 0.8em;
+    text-align: center;
+
 }
 
 a {
@@ -105,30 +127,52 @@ a {
     border-radius: 10px;
     text-align: center;
     padding-top: 10px;
-    padding-bottom: auto;
 }
 
-.offerLink > a {
+.CvLink {
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+.offerLink {
     color: white;
     background-color: var(--color-accent);
 }
 
+.linkContainer {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .userStatus {
+    height: 15%;
+    padding-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.circle {
+    height: 8px;
+    width: 8px;
+    background-color: #2cda2c;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
 .userStatus > p {
-    color: rgb(168,168,168);
+    color: #a8a8a8;
     font-size: 0.65em;
 }
 
 .cardBottom {
     height: 55%;
     width: 100%;
-    background-color: #e7e4e4;
+    background-color: #f0eeee;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
